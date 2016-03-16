@@ -2,16 +2,16 @@
 print "Total de rendimentos bancarios: ";
 $tRendiBanc = trim(fgets(STDIN));
 
-print "Total de rendimentos de salarios ou serviços: ";
+print "Total de rendimentos de salarios ou serviÃ§os: ";
 $tRendiSal = trim(fgets(STDIN));
 
 print "Total de outros rendimentos: ";
 $totalRend = trim(fgets(STDIN));
 
-print "Serviços medicos pagos: ";
+print "ServiÃ§os medicos pagos: ";
 $ServMed = trim(fgets(STDIN));
 
-print "Serviços educacionais pagos: ";
+print "ServiÃ§os educacionais pagos: ";
 $ServAdc = trim(fgets(STDIN));
 
 
@@ -38,7 +38,7 @@ $total = ($subtotal-$max1);
 print "\n   ";
 Print "Total de impostos:";
 print  "\n$rend1		(Sobre rendimentos bancarios)";
-print "\n$tRendiSal1		(Sobre salarios serviços)";
+print "\n$tRendiSal1		(Sobre salarios serviÃ§os)";
 print "\n$totalRend1		(Sobre outros rendimentos)";
 print "\n$subtotal		(Total)";
 print "\n ------------------------------------ ";
@@ -46,11 +46,13 @@ print "\n ------------------------------------ ";
 print "\nMaximo a ser abatido: \n$max1 ";
 print "\n ------------------------------------ ";
 print "\nTotal de valores possiveis de abater: ";
-print "\n$ServMed		(Serviços medicos)";
-print "\n$ServAdc		(Serviços educacionais)";
+print "\n$ServMed		(ServiÃ§os medicos)";
+print "\n$ServAdc		(ServiÃ§os educacionais)";
 print "\n$tot		(Total)";
 print "\n ------------------------------------ ";
 print "\nImposto total: ";
 print "\n$subtotal		(Imposto bruto)";
-print "\n$max1		(Abatimento)";
+if ($tot<0.3*$subtotal){
+print "\n$tot		(Abatimento)";}
+else print "\n$max1" ;
 print "\n$total		(Total)";
